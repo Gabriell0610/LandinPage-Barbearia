@@ -1,0 +1,389 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+header {
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+i {
+  color: white;
+}
+
+.header-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.header-icons a:hover i {
+  animation: translateY 0.8s infinite alternate;
+  color: #d34040;
+}
+
+@keyframes translateY {
+  from {
+    transform: translatey(0) scale(1);
+  }
+  to {
+    transform: translatey(-8px) scale(1.1);
+  }
+}
+.header-button {
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 8px 24px;
+  color: white;
+  font-weight: 600;
+  background-color: transparent;
+  transition: background-color 0.8s;
+}
+
+.header-button:hover {
+  border: 1px solid #d34040;
+  background-color: #d34040;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .header-content {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-content i {
+    margin-top: 20px;
+    font-size: 30px;
+  }
+  .header-logo img {
+    width: 160px;
+    margin-top: 46px;
+  }
+  .header-button {
+    display: none;
+  }
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.bg-home {
+  position: relative;
+}
+
+.bg-home::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../img/bg.svg");
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-position: 50% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+}
+
+.hero {
+  color: white;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+.hero h1 {
+  text-align: center;
+  line-height: 150%;
+  max-width: 940px;
+  font-size: 48px;
+}
+.hero p {
+  text-align: center;
+  margin: 14px 0;
+}
+.hero .btn-contact {
+  padding: 14px 28px;
+  color: white;
+  background-color: #D94140;
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 14px 0;
+}
+
+.btn-contact:hover {
+  animation: scaleButton 0.8s alternate infinite;
+}
+
+@keyframes scaleButton {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+  }
+  .hero h1 {
+    font-size: 34px;
+    padding: 0 14px;
+    width: 100%;
+  }
+  .hero p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero h1 {
+    font-size: 22px;
+    width: 100%;
+  }
+}
+.about {
+  background-color: #06121E;
+  overflow: hidden;
+  color: white;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 34px 14px 64px 14px;
+}
+.about-content img {
+  max-width: 570px;
+}
+
+.about-content div {
+  flex: 1;
+}
+
+.description-about h2 {
+  text-transform: uppercase;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+.description-about p {
+  margin-bottom: 14px;
+  line-height: 150%;
+}
+
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 480px) {
+  .description-about h2 {
+    font-size: 28px;
+  }
+  .description-about p {
+    font-size: 12px;
+    font-weight: 300;
+  }
+}
+.services {
+  background-color: white;
+  color: #1a1f25;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+
+.services-content h2 {
+  text-align: center;
+  font-size: 44px;
+  text-transform: uppercase;
+  color: #06121E;
+}
+.services-content p {
+  text-align: center;
+  line-height: 150%;
+  font-size: 18px;
+  max-width: 900px;
+  margin: 14px 0;
+}
+
+.cortes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 0 44px 34px 44px;
+}
+
+.corte {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 -1px 17px -4px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.corte img {
+  width: 100%;
+  max-width: 354px;
+  transition: transform 0.5s;
+}
+
+.corte img:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.info-corte {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  background-color: white;
+  z-index: 2;
+}
+.info-corte button {
+  border: 0;
+  background-color: #D94140;
+  border-radius: 8px;
+  color: white;
+  padding: 8px 12px;
+}
+.info-corte strong {
+  padding: 8px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .cortes {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 375px) {
+  .cortes {
+    flex-direction: column;
+  }
+  .info-corte {
+    flex-direction: column;
+    text-align: center;
+  }
+  .services-content h2 {
+    font-size: 24px;
+  }
+  .services-content p {
+    font-size: 15px;
+  }
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 24px 0;
+  gap: 30px;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-wpp {
+  position: fixed;
+  right: 24px;
+  bottom: 14px;
+}
+.btn-wpp img {
+  max-width: 64px;
+  transition: transform 0.3s;
+}
+.btn-wpp img:hover {
+  transform: scale(1.1);
+}
+
+.btn-wpp .tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  width: 120px;
+  top: 8px;
+  left: -144px;
+  padding: 7px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #1a1f25;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.btn-wpp:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 780px) {
+  .btn-wpp {
+    right: 24px;
+    bottom: 55px;
+  }
+  .btn-wpp img {
+    max-width: 50px;
+  }
+  .footer p {
+    text-align: center;
+    font-size: 14px;
+    padding: 0 14px;
+  }
+}
+body {
+  font-family: "Sora", sans-serif;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #06121E;
+}
+
+button {
+  font-family: "Sora", sans-serif;
+  cursor: pointer;
+}
+
+svg {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}/*# sourceMappingURL=styles.css.map */
